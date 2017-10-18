@@ -33,7 +33,9 @@ public class Elementos2017Application implements CommandLineRunner{
 		//borrar
 		//System.out.println("Vamos a borrar" ); repoMensa.delete(1);
 
-
+		//buscar personalizado
+			for(Mensajito mensa:repoMensa.findByTitulo("segundo"))
+		System.out.println("Buscando por titulo"+mensa);
 
 	}
 }
