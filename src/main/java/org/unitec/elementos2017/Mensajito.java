@@ -15,6 +15,15 @@ public class Mensajito {
 
     private String cuerpo;
 
+    @Override
+    public String toString() {
+        return "Mensajito{" +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
+                ", cuerpo='" + cuerpo + '\'' +
+                '}';
+    }
+
     public Mensajito() {
     }
 
