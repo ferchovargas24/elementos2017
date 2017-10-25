@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class Elementos2017Application implements CommandLineRunner{
 
-	@Autowired RepositorioMensajito repoMensa;
+	 @Autowired RepositorioMensajito repoMensa;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Elementos2017Application.class, args);
@@ -34,8 +34,8 @@ public class Elementos2017Application implements CommandLineRunner{
 		//System.out.println("Vamos a borrar" ); repoMensa.delete(1);
 
 		//buscar personalizado
-			for(Mensajito mensa:repoMensa.findByTitulo("segundo"))
-		System.out.println("Buscando por titulo"+mensa);
+			/*for(Mensajito mensa:repoMensa.findByTitulo("segundo"))
+		System.out.println("Buscando por titulo"+mensa);*/
 
 	}
 }
