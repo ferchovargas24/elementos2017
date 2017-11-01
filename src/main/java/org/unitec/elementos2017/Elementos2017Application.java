@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Elementos2017Application implements CommandLineRunner{
 
 	 @Autowired RepositorioMensajito repoMensa;
+	 @Autowired RepositorioUsuairo repoUsu;
+	 @Autowired RepositorioDireccion repoDir;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Elementos2017Application.class, args);
@@ -16,26 +18,14 @@ public class Elementos2017Application implements CommandLineRunner{
 
 	@Override
 	public void run(String... strings) throws Exception {
-		//insert
-		//repoMensa.save(new Mensajito(1,"segundo", "17 de octubre no tembló"));
 
-		//select
-		/*for(Mensajito mensa:repoMensa.findAll()) {
-			System.out.println(mensa.getTitulo());
-		}*/
+		//Vamos a generar un usuario
 
-		//select where id
-			//System.out.println("Vamos a buscar por id" + repoMensa.findOne(1));
+		/*Usuario u = new Usuario(12402032L,"Fernando","ferchovargas24@gmail.com");
+		repoUsu.save(u);*/
 
-		//update
-			//System.out.println("Vamos a actualizar " + repoMensa.save(new Mensajito(1,"nuevo titulo","hola")));
-
-		//borrar
-		//System.out.println("Vamos a borrar" ); repoMensa.delete(1);
-
-		//buscar personalizado
-			/*for(Mensajito mensa:repoMensa.findByTitulo("segundo"))
-		System.out.println("Buscando por titulo"+mensa);*/
-
+		//Generamos la direccion
+		Direccion d = new Direccion(new Usuario(12402032L),"Calle 5",55120,"Ecatepec");
+		repoDir.save(d);
 	}
 }
